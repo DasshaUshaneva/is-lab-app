@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EIurFZ+hECyszazeXu3WooZXtXMW9qfwD4J+i3HUadrX8RBoTC98aogAAB9CuywN+HmGKYRSkJIS7E4CrWmC2Q==",
+  "dgSpecHash": "MMZs5pwgeByIfdozTCXF7Htfsn88DM9LR7+14oMqYvzh7bo/o5y8LoG3lq2uyzXzfvmNScmzZtxhz4sidwj2SQ==",
   "success": true,
-  "projectFilePath": "/home/dasha/deploy/is-stack/app/app.csproj",
+  "projectFilePath": "/home/dasha/deploy/is-stack/app.csproj",
   "expectedPackageFiles": [
     "/home/dasha/.nuget/packages/microsoft.aspnetcore.openapi/8.0.26/microsoft.aspnetcore.openapi.8.0.26.nupkg.sha512",
     "/home/dasha/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

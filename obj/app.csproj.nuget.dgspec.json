@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/dasha/deploy/is-stack/app/app.csproj": {}
+    "/home/dasha/deploy/is-stack/app.csproj": {}
   },
   "projects": {
-    "/home/dasha/deploy/is-stack/app/app.csproj": {
+    "/home/dasha/deploy/is-stack/app.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/dasha/deploy/is-stack/app/app.csproj",
+        "projectUniqueName": "/home/dasha/deploy/is-stack/app.csproj",
         "projectName": "app",
-        "projectPath": "/home/dasha/deploy/is-stack/app/app.csproj",
+        "projectPath": "/home/dasha/deploy/is-stack/app.csproj",
         "packagesPath": "/home/dasha/.nuget/packages/",
-        "outputPath": "/home/dasha/deploy/is-stack/app/obj/",
+        "outputPath": "/home/dasha/deploy/is-stack/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/dasha/.nuget/NuGet/NuGet.Config"
