@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: Set lowercase image name
         run: |
-          echo "IMAGE_NAME=${GITHUB_REPOSITORY,,} >> $GITHUB_ENV
+          echo "IMAGE_NAME=${GITHUB_REPOSITORY,,}" >> $GITHUB_ENV
       - uses: actions/checkout@v4
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
