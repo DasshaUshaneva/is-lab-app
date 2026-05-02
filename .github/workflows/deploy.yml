@@ -1,9 +1,11 @@
 name: CD
+
 on:
   workflow_run:
     workflows: ["CI"]
     types: [completed]
     branches: [master]
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -16,7 +18,7 @@ jobs:
           key: ${{ secrets.DEPLOY_SSH_KEY }}
           script: |
             echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u ${{ secrets.GHCR_USER }} --password-stdin
-            cd ${{ secrets.DEPLOY_PATH }} && docker compose pull && docker compose up -d && docker image prune -f
+            cd ${{ secrets.DEPLOY_PATH }}
             docker compose pull
             docker compose up -d
             docker image prune -f
