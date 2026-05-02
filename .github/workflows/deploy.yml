@@ -1,0 +1,19 @@
+name: CD
+on:
+workflow_run:
+workflows: ["CI/CD"]
+types: [completed]
+branches: [master]
+jobs:
+deploy:
+runs-on: ubuntu-latest
+if: ${{ github.event.workflow_run.conclusion == 'sicces' }}
+steps:
+- uses: appleboy/ssh-action@v1.0.3
+with:
+host: ${{ secrets.DEPLOY_HOST }}
+username: ${{ secrets.DEPLOY_USER }}
+key: ${{ secrets.DEPLOY_SSH_KEY }}
+scripts: |
+echp "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u ${{ secrets.GHCR_USER }} --password-stdin
+cd ${{ secrets.DEPLOY_PATH }} && docker compose pull && docker compose up -d && docker image prune -f
