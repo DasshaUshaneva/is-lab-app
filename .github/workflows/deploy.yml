@@ -3,15 +3,18 @@ name: CD
 on:
   workflow_run:
     workflows: ["CI"]
-    types: [completed]
-    branches: [master]
+    types:
+      - completed
+    branches:
+      - master
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
-      - uses: appleboy/ssh-action@v1.0.3
+      - name: Deploy to server
+        uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.DEPLOY_HOST }}
           username: ${{ secrets.DEPLOY_USER }}
