@@ -17,7 +17,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.MapGet("/", () => "Application is running");
-app.MapGet("/version", () => "0.1.0-lab11");
+app.MapGet("/version", () => "0.1.0-lab12");
 app.MapGet("/health", () => new { status = "Healthy", timestamp = DateTime.UtcNow });
 app.MapGet("/db/ping", () => new {status = "OK", database = "Connected" });
 
