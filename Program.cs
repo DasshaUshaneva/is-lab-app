@@ -19,7 +19,7 @@ app.UseHttpsRedirection();
 app.MapGet("/", () => "Application is running");
 app.MapGet("/version", () => "0.1.0-lab12");
 app.MapGet("/health", () => new { status = "Healthy", timestamp = DateTime.UtcNow });
-//app.MapGet("/db/ping", () => new {status = "OK", database = "Connected" });
+app.MapGet("/db/ping", () => new {status = "OK", database = "Connected" });
 
 var summaries = new[]
 {
